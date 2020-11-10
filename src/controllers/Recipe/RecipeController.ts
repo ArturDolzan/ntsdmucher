@@ -1,4 +1,4 @@
-import { Ingredient, ListOfRecipes } from '@models/Recipes'
+import { ListOfRecipes } from '@models/Recipes'
 import { Request, Response } from 'express'
 import { IRecipeService } from './../../services/Recipe/IRecipeService'
 
@@ -13,10 +13,16 @@ class RecipeController {
 
       const ingredients = i.split(',')
 
-      const listOfIngredients: Ingredient[] = []
-      Object.assign(listOfIngredients, ingredients)
+      // const listOfIngredients: string[] = []
 
-      recipes = await this.recipeService.listRecipes(listOfIngredients)
+      // ingredients.map((item, idx) => {
+      //   const ingredient = new Ingredient()
+      //   ingredient = item
+
+      //   return listOfIngredients.push(ingredient)
+      // })
+
+      recipes = await this.recipeService.listRecipes(ingredients)
     } catch (error) {
       return res.status(400).json(`Ops... ${error}`)
     }

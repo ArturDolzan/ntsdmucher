@@ -1,15 +1,11 @@
-export class Ingredient {
-  public name: string
-}
-
 export class Recipe {
   public title: string
 
-  public ingredients: Ingredient[]
+  public ingredients: string[]
 
   public link: string
 
-  public gifLink: string
+  public gif: string
 }
 
 export class ListOfRecipes {
