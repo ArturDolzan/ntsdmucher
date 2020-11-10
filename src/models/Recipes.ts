@@ -1,8 +1,8 @@
-export interface Ingredient {
-  name: string
+export class Ingredient {
+  public name: string
 }
 
-class Recipe {
+export class Recipe {
   public title: string
 
   public ingredients: Ingredient[]
@@ -12,4 +12,12 @@ class Recipe {
   public gifLink: string
 }
 
-export default Recipe
+export class ListOfRecipes {
+  constructor () {
+    this.keywords = []
+    this.recipes = []
+  }
+
+  public keywords: string[]
+  public recipes: Recipe[]
+}
