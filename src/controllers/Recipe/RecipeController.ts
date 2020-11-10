@@ -13,15 +13,6 @@ class RecipeController {
 
       const ingredients = i.split(',')
 
-      // const listOfIngredients: string[] = []
-
-      // ingredients.map((item, idx) => {
-      //   const ingredient = new Ingredient()
-      //   ingredient = item
-
-      //   return listOfIngredients.push(ingredient)
-      // })
-
       recipes = await this.recipeService.listRecipes(ingredients)
     } catch (error) {
       return res.status(400).json(`Ops... ${error}`)

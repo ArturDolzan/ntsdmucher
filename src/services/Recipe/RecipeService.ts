@@ -20,7 +20,7 @@ class RecipeService implements IRecipeService {
       recipe.title = item.title
       recipe.ingredients = item.ingredients.split(',')
       recipe.link = item.href
-      recipe.gif = ''
+      recipe.gif = 'The Giphy platform is returning error 500 on creating the API key :('
 
       listOfRecipes.recipes.push(recipe)
     }))
